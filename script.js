@@ -70,6 +70,41 @@ document.addEventListener('DOMContentLoaded', function() {
                 addToOutput('<div class="command-response">Never gonna give you up...</div>');
             }
         },
+// Add this to the commands object (with the other hidden commands)
+tigerdropnegatesalldamage: {
+    hidden: true,
+    execute: () => {
+        // Create image element
+        const img = document.createElement('img');
+        img.src = 'Tiger_drop.jpg'; // Example tiger image URL
+        img.alt = 'Tiger drop negates all damage';
+        img.style.position = 'fixed';
+        img.style.top = '50%';
+        img.style.left = '50%';
+        img.style.transform = 'translate(-50%, -50%)';
+        img.style.maxWidth = '80vw';
+        img.style.maxHeight = '80vh';
+        img.style.zIndex = '1000';
+        img.style.boxShadow = '0 0 20px rgba(0,0,0,0.8)';
+        
+        // Create audio element
+        const audio = new Audio('tiger-drop-sound-effect-made-with-Voicemod.mp3'); // Example sound URL
+        audio.volume = 0.5;
+        
+        // Add to document
+        document.body.appendChild(img);
+        
+        // Play sound
+        audio.play().catch(e => console.log('Audio play failed:', e));
+        
+        // Remove after 5 seconds
+        setTimeout(() => {
+            document.body.removeChild(img);
+        }, 5000);
+        
+        addToOutput('<div class="command-response">Tiger drop activated!</div>');
+    }
+},
         neofetch: {
             hidden: true,
             execute: () => {
@@ -95,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     };
+    
 
     // Helper function to detect browser
     function getBrowserName() {
