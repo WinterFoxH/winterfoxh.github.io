@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video class="video-background" autoplay loop muted playsinline>
+        <source src="ascii-animation.mp4" type="video/mp4">
+    </video>
+
+    <!-- Terminal Window -->
+    <div class="terminal-box">
+        <!-- Terminal header -->
+        <div class="terminal-header">
+            <span class="terminal-title">winterfox@portfolio</span>
+        </div>
+        
+        <!-- Terminal content -->
+        <div class="terminal-content">
+            <div class="terminal-output" id="terminal-output">
+                <div class="welcome-message">
+                    <p>Type <span class="command-example">help</span> for available commands</p>
+                </div>
+            </div>
+            
+            <!-- Terminal input -->
+            <div class="terminal-input">
+                <span class="prompt">$</span>
+                <input type="text" class="command-input" id="command-input" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
