@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 addToOutput('<div class="command-response">Never gonna give you up...</div>');
             }
         },
-// Add this to the commands object (with the other hidden commands)
 tigerdropnegatesalldamage: {
     hidden: true,
     execute: () => {
