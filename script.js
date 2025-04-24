@@ -142,7 +142,7 @@ tigerdropnegatesalldamage: {
         return "Unknown";
     }
 
-    // Latest Linux Mint ASCII art with proper color formatting
+    // Linux Mint ASCII art
     function getLinuxMintAsciiArt() {
         return `
 <span style="color: #8cc04b}">MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM</span>
